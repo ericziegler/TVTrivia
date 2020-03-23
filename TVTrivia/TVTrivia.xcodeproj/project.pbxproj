@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78C05D392428CAB30071EAED /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C05D382428CAB30071EAED /* UIKitExtensions.swift */; };
 		78E63BDD24285DAD0020240F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E63BDC24285DAD0020240F /* AppDelegate.swift */; };
 		78E63BDF24285DAD0020240F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E63BDE24285DAD0020240F /* MainController.swift */; };
 		78E63BE224285DAD0020240F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E63BE024285DAD0020240F /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78C05D382428CAB30071EAED /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		78E63BD924285DAC0020240F /* TVTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E63BDC24285DAD0020240F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78E63BDE24285DAD0020240F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		78E63BEC24285DBE0020240F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				78C05D382428CAB30071EAED /* UIKitExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			files = (
 				78E63BDF24285DAD0020240F /* MainController.swift in Sources */,
 				78E63BDD24285DAD0020240F /* AppDelegate.swift in Sources */,
+				78C05D392428CAB30071EAED /* UIKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
