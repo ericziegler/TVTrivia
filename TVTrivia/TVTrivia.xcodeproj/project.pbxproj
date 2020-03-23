@@ -12,7 +12,6 @@
 		78C05D3D2428EA2F0071EAED /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C05D3C2428EA2F0071EAED /* Question.swift */; };
 		78C05D3F2428EBA70071EAED /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C05D3E2428EBA70071EAED /* JSON.swift */; };
 		78C05D432428FBBB0071EAED /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C05D422428FBBB0071EAED /* FoundationExtensions.swift */; };
-		78C05D452429145D0071EAED /* InsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C05D442429145D0071EAED /* InsetLabel.swift */; };
 		78E63BDD24285DAD0020240F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E63BDC24285DAD0020240F /* AppDelegate.swift */; };
 		78E63BDF24285DAD0020240F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E63BDE24285DAD0020240F /* MainController.swift */; };
 		78E63BE224285DAD0020240F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E63BE024285DAD0020240F /* Main.storyboard */; };
@@ -25,7 +24,6 @@
 		78C05D3C2428EA2F0071EAED /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		78C05D3E2428EBA70071EAED /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		78C05D422428FBBB0071EAED /* FoundationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
-		78C05D442429145D0071EAED /* InsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLabel.swift; sourceTree = "<group>"; };
 		78E63BD924285DAC0020240F /* ZigTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZigTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E63BDC24285DAD0020240F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78E63BDE24285DAD0020240F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				78C05D3E2428EBA70071EAED /* JSON.swift */,
-				78C05D442429145D0071EAED /* InsetLabel.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -203,7 +200,6 @@
 				78C05D3B2428EA290071EAED /* QuestionList.swift in Sources */,
 				78C05D3F2428EBA70071EAED /* JSON.swift in Sources */,
 				78E63BDD24285DAD0020240F /* AppDelegate.swift in Sources */,
-				78C05D452429145D0071EAED /* InsetLabel.swift in Sources */,
 				78C05D392428CAB30071EAED /* UIKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

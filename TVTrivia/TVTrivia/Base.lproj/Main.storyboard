@@ -11,7 +11,7 @@
         <!--Main Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="TVTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="ZigTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -66,61 +66,101 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWt-f8-ZMl">
                                         <rect key="frame" x="0.0" y="564" width="1920" height="516"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24C-Zr-RcB" customClass="InsetLabel" customModule="ZigTV">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHC-Bp-2UU">
                                                 <rect key="frame" x="178" y="0.0" width="700" height="180"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24C-Zr-RcB">
+                                                        <rect key="frame" x="10" y="10" width="680" height="160"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="80"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="700" id="Ht9-2o-Vep"/>
-                                                    <constraint firstAttribute="height" constant="180" id="z5N-Pc-Tsq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="24C-Zr-RcB" secondAttribute="trailing" constant="10" id="9Lx-ut-Q0C"/>
+                                                    <constraint firstAttribute="height" constant="180" id="MY0-fP-kJi"/>
+                                                    <constraint firstAttribute="width" constant="700" id="Oxl-mS-LJ8"/>
+                                                    <constraint firstItem="24C-Zr-RcB" firstAttribute="top" secondItem="zHC-Bp-2UU" secondAttribute="top" constant="10" id="bH6-uc-1Ns"/>
+                                                    <constraint firstAttribute="bottom" secondItem="24C-Zr-RcB" secondAttribute="bottom" constant="10" id="zlv-SY-ZPs"/>
+                                                    <constraint firstItem="24C-Zr-RcB" firstAttribute="leading" secondItem="zHC-Bp-2UU" secondAttribute="leading" constant="10" id="zlw-2t-Ilf"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="80"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-bp-LbO" customClass="InsetLabel" customModule="ZigTV">
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEG-HF-OCd">
                                                 <rect key="frame" x="1042" y="0.0" width="700" height="180"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-bp-LbO">
+                                                        <rect key="frame" x="10" y="10" width="680" height="160"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="80"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="700" id="WSA-d3-oLB"/>
-                                                    <constraint firstAttribute="height" constant="180" id="rPA-YI-uyW"/>
+                                                    <constraint firstItem="Gzy-bp-LbO" firstAttribute="leading" secondItem="tEG-HF-OCd" secondAttribute="leading" constant="10" id="S4v-q3-Pxe"/>
+                                                    <constraint firstItem="Gzy-bp-LbO" firstAttribute="top" secondItem="tEG-HF-OCd" secondAttribute="top" constant="10" id="UM4-YC-GQY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Gzy-bp-LbO" secondAttribute="bottom" constant="10" id="g2d-cH-NNg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Gzy-bp-LbO" secondAttribute="trailing" constant="10" id="pJP-jH-gbn"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="80"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VZ-iw-v4g" customClass="InsetLabel" customModule="ZigTV">
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzR-ci-uHU">
                                                 <rect key="frame" x="178" y="268" width="700" height="180"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VZ-iw-v4g">
+                                                        <rect key="frame" x="10" y="10" width="680" height="160"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="80"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="180" id="SvW-qo-uXe"/>
-                                                    <constraint firstAttribute="width" constant="700" id="nxC-W0-gk2"/>
+                                                    <constraint firstItem="6VZ-iw-v4g" firstAttribute="leading" secondItem="gzR-ci-uHU" secondAttribute="leading" constant="10" id="gL3-YH-3qb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6VZ-iw-v4g" secondAttribute="trailing" constant="10" id="iqf-8W-OqD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6VZ-iw-v4g" secondAttribute="bottom" constant="10" id="mz7-1a-yVL"/>
+                                                    <constraint firstItem="6VZ-iw-v4g" firstAttribute="top" secondItem="gzR-ci-uHU" secondAttribute="top" constant="10" id="vmf-Wq-mou"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="80"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hX-jB-fLH" customClass="InsetLabel" customModule="ZigTV">
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-S7-2mN">
                                                 <rect key="frame" x="1042" y="268" width="700" height="180"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hX-jB-fLH">
+                                                        <rect key="frame" x="10" y="10" width="680" height="160"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="80"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="180" id="rDg-wY-zaQ"/>
-                                                    <constraint firstAttribute="width" constant="700" id="wgf-lh-PJf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6hX-jB-fLH" secondAttribute="bottom" constant="10" id="HzN-c6-FKS"/>
+                                                    <constraint firstItem="6hX-jB-fLH" firstAttribute="leading" secondItem="SdF-S7-2mN" secondAttribute="leading" constant="10" id="Izz-a6-5G7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6hX-jB-fLH" secondAttribute="trailing" constant="10" id="KYA-rF-nsW"/>
+                                                    <constraint firstItem="6hX-jB-fLH" firstAttribute="top" secondItem="SdF-S7-2mN" secondAttribute="top" constant="10" id="tCS-GN-LRb"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="80"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="6VZ-iw-v4g" firstAttribute="centerX" secondItem="24C-Zr-RcB" secondAttribute="centerX" id="4xN-Vt-n8h"/>
-                                            <constraint firstAttribute="bottom" secondItem="6hX-jB-fLH" secondAttribute="bottom" constant="68" id="9kT-ky-JDI"/>
-                                            <constraint firstItem="24C-Zr-RcB" firstAttribute="top" secondItem="iWt-f8-ZMl" secondAttribute="top" id="X4i-5p-yVb"/>
-                                            <constraint firstItem="24C-Zr-RcB" firstAttribute="centerX" secondItem="iWt-f8-ZMl" secondAttribute="centerX" multiplier="0.55" id="alh-M8-opr"/>
-                                            <constraint firstAttribute="bottom" secondItem="6VZ-iw-v4g" secondAttribute="bottom" constant="68" id="fAh-wk-PfJ"/>
-                                            <constraint firstItem="Gzy-bp-LbO" firstAttribute="top" secondItem="iWt-f8-ZMl" secondAttribute="top" id="l7y-ZS-8iv"/>
-                                            <constraint firstItem="6hX-jB-fLH" firstAttribute="centerX" secondItem="Gzy-bp-LbO" secondAttribute="centerX" id="ldX-dC-UPF"/>
-                                            <constraint firstItem="Gzy-bp-LbO" firstAttribute="centerX" secondItem="iWt-f8-ZMl" secondAttribute="centerX" multiplier="1.45" id="wze-9P-VqE"/>
+                                            <constraint firstItem="SdF-S7-2mN" firstAttribute="height" secondItem="tEG-HF-OCd" secondAttribute="height" id="0fZ-QD-blx"/>
+                                            <constraint firstItem="tEG-HF-OCd" firstAttribute="top" secondItem="zHC-Bp-2UU" secondAttribute="top" id="4hd-kj-Xb8"/>
+                                            <constraint firstItem="SdF-S7-2mN" firstAttribute="top" secondItem="tEG-HF-OCd" secondAttribute="bottom" constant="88" id="61Z-BT-R7i"/>
+                                            <constraint firstItem="gzR-ci-uHU" firstAttribute="height" secondItem="zHC-Bp-2UU" secondAttribute="height" id="72j-0p-uoi"/>
+                                            <constraint firstItem="tEG-HF-OCd" firstAttribute="centerX" secondItem="iWt-f8-ZMl" secondAttribute="centerX" multiplier="1.45" id="8jP-AC-wJh"/>
+                                            <constraint firstItem="tEG-HF-OCd" firstAttribute="height" secondItem="zHC-Bp-2UU" secondAttribute="height" id="95q-ZB-TQ2"/>
+                                            <constraint firstItem="SdF-S7-2mN" firstAttribute="width" secondItem="tEG-HF-OCd" secondAttribute="width" id="CQm-hg-mEd"/>
+                                            <constraint firstItem="gzR-ci-uHU" firstAttribute="top" secondItem="zHC-Bp-2UU" secondAttribute="bottom" constant="88" id="Nzh-fD-fCO"/>
+                                            <constraint firstItem="zHC-Bp-2UU" firstAttribute="centerX" secondItem="iWt-f8-ZMl" secondAttribute="centerX" multiplier="0.55" id="UkI-Pt-xco"/>
+                                            <constraint firstItem="SdF-S7-2mN" firstAttribute="centerX" secondItem="tEG-HF-OCd" secondAttribute="centerX" id="YqO-XH-ImV"/>
+                                            <constraint firstItem="gzR-ci-uHU" firstAttribute="centerX" secondItem="zHC-Bp-2UU" secondAttribute="centerX" id="bZv-Uf-aXS"/>
+                                            <constraint firstItem="zHC-Bp-2UU" firstAttribute="top" secondItem="iWt-f8-ZMl" secondAttribute="top" id="cfc-Ut-Jyq"/>
+                                            <constraint firstItem="tEG-HF-OCd" firstAttribute="width" secondItem="zHC-Bp-2UU" secondAttribute="width" id="xyA-yj-hT6"/>
+                                            <constraint firstItem="gzR-ci-uHU" firstAttribute="width" secondItem="zHC-Bp-2UU" secondAttribute="width" id="yA5-vo-jKW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.1764705882352941" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="7Q9-dP-u0H" secondAttribute="trailing" id="BNP-MS-4G8"/>
                                     <constraint firstItem="iWt-f8-ZMl" firstAttribute="leading" secondItem="o3w-Mq-yyh" secondAttribute="leading" id="C55-gi-gdl"/>
@@ -135,7 +175,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.14901960784313725" green="0.1764705882352941" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.23137254901960785" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="o3w-Mq-yyh" secondAttribute="trailing" id="Ajq-nD-f43"/>
                             <constraint firstItem="o3w-Mq-yyh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UvH-Of-Rpb"/>
@@ -146,9 +186,13 @@
                     </view>
                     <connections>
                         <outlet property="answer1Label" destination="24C-Zr-RcB" id="Tgz-Cg-aTr"/>
+                        <outlet property="answer1View" destination="zHC-Bp-2UU" id="hNK-2k-r46"/>
                         <outlet property="answer2Label" destination="Gzy-bp-LbO" id="Jri-Ii-wF4"/>
+                        <outlet property="answer2View" destination="tEG-HF-OCd" id="djh-j0-h2a"/>
                         <outlet property="answer3Label" destination="6VZ-iw-v4g" id="Gby-jM-8AN"/>
+                        <outlet property="answer3View" destination="gzR-ci-uHU" id="YZ2-bt-HnQ"/>
                         <outlet property="answer4Label" destination="6hX-jB-fLH" id="JSl-bN-A9I"/>
+                        <outlet property="answer4View" destination="SdF-S7-2mN" id="GnZ-z2-cqc"/>
                         <outlet property="answersView" destination="iWt-f8-ZMl" id="Wx2-Re-7QI"/>
                         <outlet property="questionLabel" destination="SNP-r5-Cmm" id="bkP-I0-F7P"/>
                         <outlet property="questionView" destination="AgY-Iv-hJ2" id="bHE-au-ym3"/>

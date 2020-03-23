@@ -18,10 +18,14 @@ class MainController: UIViewController {
     @IBOutlet var answersView: UIView!
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
-    @IBOutlet var answer1Label: InsetLabel!
-    @IBOutlet var answer2Label: InsetLabel!
-    @IBOutlet var answer3Label: InsetLabel!
-    @IBOutlet var answer4Label: InsetLabel!
+    @IBOutlet var answer1View: UIView!
+    @IBOutlet var answer2View: UIView!
+    @IBOutlet var answer3View: UIView!
+    @IBOutlet var answer4View: UIView!
+    @IBOutlet var answer1Label: UILabel!
+    @IBOutlet var answer2Label: UILabel!
+    @IBOutlet var answer3Label: UILabel!
+    @IBOutlet var answer4Label: UILabel!
 
     var countdownTimer: Timer?
     let countdownStartTime = 25
@@ -33,7 +37,7 @@ class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleAnswerLabels()
+        styleAnswerViews()
         questionList.loadQuestionsWith { [unowned self] (json, error) in
             DispatchQueue.main.async {
                 self.updateQuestion()
@@ -41,17 +45,17 @@ class MainController: UIViewController {
         }
     }
 
-    private func styleAnswerLabels() {
-        styleLabel(label: answer1Label)
-        styleLabel(label: answer2Label)
-        styleLabel(label: answer3Label)
-        styleLabel(label: answer4Label)
+    private func styleAnswerViews() {
+        styleAnswerView(answer1View)
+        styleAnswerView(answer2View)
+        styleAnswerView(answer3View)
+        styleAnswerView(answer4View)
     }
 
-    private func styleLabel(label: UILabel) {
-        label.layer.cornerRadius = 30
-        label.layer.borderWidth = 10
-        label.layer.borderColor = UIColor(hex: 0x666d8d).cgColor
+    private func styleAnswerView(_ answerView: UIView) {
+        answerView.layer.cornerRadius = 30
+        answerView.layer.borderWidth = 10
+        answerView.layer.borderColor = UIColor(hex: 0x009ca6).cgColor
     }
 
     // MARK: - Countdown Timer
@@ -106,8 +110,8 @@ class MainController: UIViewController {
                 }
                 hiddenAnswerIndices.append(index)
                 UIView.animate(withDuration: 0.2) {
-                    let answerLabel = self.labelForAnswerIndex(index)
-                    answerLabel.alpha = 0
+                    let answerView = self.viewForAnswerIndex(index)
+                    answerView.alpha = 0
                 }
             }
         }
@@ -116,8 +120,8 @@ class MainController: UIViewController {
     private func resetAnswerLabels() {
         hiddenAnswerIndices.removeAll()
         for i in 0 ..< 4 {
-            let answerLabel = labelForAnswerIndex(i)
-            answerLabel.alpha = 1
+            let answerView = viewForAnswerIndex(i)
+            answerView.alpha = 1
         }
     }
 
@@ -132,6 +136,20 @@ class MainController: UIViewController {
             return answer3Label
         } else {
             return answer4Label
+        }
+    }
+
+    private func viewForAnswerIndex(_ index: Int) -> UIView {
+        if index == 0 {
+            return answer1View
+        }
+        else if index == 1 {
+            return answer2View
+        }
+        else if index == 2 {
+            return answer3View
+        } else {
+            return answer4View
         }
     }
 
