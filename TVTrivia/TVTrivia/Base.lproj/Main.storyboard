@@ -26,7 +26,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q9-dP-u0H">
                                         <rect key="frame" x="0.0" y="0.0" width="1920" height="164"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTd-fA-NTE">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTd-fA-NTE">
                                                 <rect key="frame" x="1664" y="23.5" width="196" height="117"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="117" id="d6a-yS-nwV"/>
@@ -47,9 +47,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AgY-Iv-hJ2">
                                         <rect key="frame" x="0.0" y="164" width="1920" height="400"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this your first tvOS app?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="SNP-r5-Cmm">
-                                                <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
-                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="100"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="SNP-r5-Cmm">
+                                                <rect key="frame" x="20" y="0.0" width="1880" height="400"/>
+                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="95"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -57,8 +57,8 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="3ap-sW-f9k"/>
-                                            <constraint firstItem="SNP-r5-Cmm" firstAttribute="leading" secondItem="AgY-Iv-hJ2" secondAttribute="leading" id="6bH-Ax-G2A"/>
-                                            <constraint firstAttribute="trailing" secondItem="SNP-r5-Cmm" secondAttribute="trailing" id="WJF-Sm-u1K"/>
+                                            <constraint firstItem="SNP-r5-Cmm" firstAttribute="leading" secondItem="AgY-Iv-hJ2" secondAttribute="leading" constant="20" id="6bH-Ax-G2A"/>
+                                            <constraint firstAttribute="trailing" secondItem="SNP-r5-Cmm" secondAttribute="trailing" constant="20" id="WJF-Sm-u1K"/>
                                             <constraint firstAttribute="bottom" secondItem="SNP-r5-Cmm" secondAttribute="bottom" id="Zvw-dC-MuF"/>
                                             <constraint firstItem="SNP-r5-Cmm" firstAttribute="top" secondItem="AgY-Iv-hJ2" secondAttribute="top" id="m0X-es-vb5"/>
                                         </constraints>
@@ -66,7 +66,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWt-f8-ZMl">
                                         <rect key="frame" x="0.0" y="564" width="1920" height="516"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24C-Zr-RcB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24C-Zr-RcB" customClass="InsetLabel" customModule="ZigTV">
                                                 <rect key="frame" x="178" y="0.0" width="700" height="180"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="700" id="Ht9-2o-Vep"/>
@@ -76,7 +76,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-bp-LbO">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-bp-LbO" customClass="InsetLabel" customModule="ZigTV">
                                                 <rect key="frame" x="1042" y="0.0" width="700" height="180"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="700" id="WSA-d3-oLB"/>
@@ -86,7 +86,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maybe" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VZ-iw-v4g">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VZ-iw-v4g" customClass="InsetLabel" customModule="ZigTV">
                                                 <rect key="frame" x="178" y="268" width="700" height="180"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="SvW-qo-uXe"/>
@@ -96,7 +96,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I don't know" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hX-jB-fLH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hX-jB-fLH" customClass="InsetLabel" customModule="ZigTV">
                                                 <rect key="frame" x="1042" y="268" width="700" height="180"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="rDg-wY-zaQ"/>

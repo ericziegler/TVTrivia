@@ -18,21 +18,27 @@ class MainController: UIViewController {
     @IBOutlet var answersView: UIView!
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
-    @IBOutlet var answer1Label: UILabel!
-    @IBOutlet var answer2Label: UILabel!
-    @IBOutlet var answer3Label: UILabel!
-    @IBOutlet var answer4Label: UILabel!
+    @IBOutlet var answer1Label: InsetLabel!
+    @IBOutlet var answer2Label: InsetLabel!
+    @IBOutlet var answer3Label: InsetLabel!
+    @IBOutlet var answer4Label: InsetLabel!
 
     var countdownTimer: Timer?
-    let countdownStartTime = 5
+    let countdownStartTime = 25
     var timeRemaining: Int!
+    let questionList = QuestionList()
+    var hiddenAnswerIndices = [Int]()
 
     // MARK: - Init
 
     override func viewDidLoad() {
         super.viewDidLoad()
         styleAnswerLabels()
-        updateQuestion()
+        questionList.loadQuestionsWith { [unowned self] (json, error) in
+            DispatchQueue.main.async {
+                self.updateQuestion()
+            }
+        }
     }
 
     private func styleAnswerLabels() {
@@ -65,6 +71,7 @@ class MainController: UIViewController {
             updateAvailableAnswers()
         } else {
             endCountdown()
+            questionList.curQuestionIndex += 1
             perform(#selector(updateQuestion), with: nil, afterDelay: 4)
         }
     }
@@ -72,20 +79,59 @@ class MainController: UIViewController {
     // MARK: - Display
 
     @objc private func updateQuestion() {
-        timeRemaining = countdownStartTime
-        timerLabel.text = String(timeRemaining)
-        startCountdown()
+        if let question = questionList.currentQuestion {
+            resetAnswerLabels()
+            timeRemaining = countdownStartTime
+            timerLabel.text = String(timeRemaining)
+            startCountdown()
+            questionLabel.text = question.text
+            for i in 0 ..< question.answers.count {
+                let answerLabel = labelForAnswerIndex(i)
+                answerLabel.text = question.answers[i].text
+            }
+            if questionList.curQuestionIndex > questionList.questions.count - 5 {
+                questionList.loadQuestionsWith { (json, error) in
+                    question.hasDisplayed = true
+                }
+            }
+        }
     }
 
     private func updateAvailableAnswers() {
-        if timeRemaining == 16 {
-            // remove first answer
+        if timeRemaining == 16  || timeRemaining == 7 || timeRemaining == 0 {
+            if let question = questionList.currentQuestion {
+                var index = question.randomIncorrectAnswerIndex()
+                while hiddenAnswerIndices.contains(index) {
+                    index = question.randomIncorrectAnswerIndex()
+                }
+                hiddenAnswerIndices.append(index)
+                UIView.animate(withDuration: 0.2) {
+                    let answerLabel = self.labelForAnswerIndex(index)
+                    answerLabel.alpha = 0
+                }
+            }
         }
-        else if timeRemaining == 7 {
-            // remove second answer
+    }
+
+    private func resetAnswerLabels() {
+        hiddenAnswerIndices.removeAll()
+        for i in 0 ..< 4 {
+            let answerLabel = labelForAnswerIndex(i)
+            answerLabel.alpha = 1
         }
-        else if timeRemaining == 0 {
-            // remove third answer
+    }
+
+    private func labelForAnswerIndex(_ index: Int) -> UILabel {
+        if index == 0 {
+            return answer1Label
+        }
+        else if index == 1 {
+            return answer2Label
+        }
+        else if index == 2 {
+            return answer3Label
+        } else {
+            return answer4Label
         }
     }
 
